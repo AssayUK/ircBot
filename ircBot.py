@@ -134,7 +134,7 @@ while True:
 		time.sleep(5)
 		print("Value of inChan is " + str(inChan) + "\r\n")
 		print("going round that silly loop")
-		rawSend(":"  +ircNick +  " PRIVMSG " + " nickserv :identify <pass> " + " \r\n")	
+		rawSend(":"  +ircNick +  " PRIVMSG " + " nickserv :identify <password> " + " \r\n")	
 		for channel in channelList:
 		    rawSend("JOIN " + channel + "\r\n")
                 rawSend("MODE " + ircNick + " +B" + "\r\n")
