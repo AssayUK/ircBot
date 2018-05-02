@@ -126,7 +126,7 @@ while True:
         if "PING" in data:
                 rawSend("PONG " + data[6:24] + "\r\n")
 		      				
-    
+#kludge for somones iffy server    
 	if not inChan:
 		count = (count + 1)
 		if count == 5:
