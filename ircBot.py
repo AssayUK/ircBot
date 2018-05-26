@@ -82,7 +82,7 @@ def channelJoin(channel, data):
             print(a)
             c,d= a.split(":")
             print(d)
-            x,y = d.split(!)
+            x,y = d.split("!")
             print (x)
             ircMessage(("Welcome " + x  + "\r\n"), channel)
             if x[0] in string.lowercase:
