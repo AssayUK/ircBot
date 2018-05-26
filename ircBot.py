@@ -80,9 +80,9 @@ def channelJoin(channel, data):
             print(line)
             a,b,c,= line.split(":")
             d,e = b.split("!")
-            ircMessage(("Welcome " + b  + "\r\n"), channel)
-            if x[0] in string.lowercase:
-                rawSend((":" + ircNick + " " + "PRIVMSG" " Chanserv voice " + channel + " " + b + "\r\n"))
+            ircMessage(("Welcome " + d  + "\r\n"), channel)
+            if d[0] in string.lowercase:
+                rawSend((":" + ircNick + " " + "PRIVMSG" " Chanserv voice " + channel + " " + d + "\r\n"))
         
 def channelRequests(channel, data):
         '''Process all of the commands into the channel'''
