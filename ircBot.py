@@ -78,7 +78,7 @@ def channelJoin(channel, data):
     for line in data.split('\n'):
         if "JOIN" in line:
             print(line)
-            a,b= line.split("!")
+            a,b,x= line.split("!")
             print(a)
             c,d= a.split(":")
             print(d)
