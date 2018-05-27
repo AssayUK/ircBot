@@ -78,8 +78,8 @@ def channelJoin(channel, data):
     for line in data.split('\n'):
         if "JOIN" in line:
             print(line)
-            a,b,c,= line.split(":")
-            d,e = b.split("!")
+            foo = line.split(":")
+            d,e = foo[1].split("!")
             ircMessage(("Welcome " + d  + "\r\n"), channel)
             if d[0] in string.lowercase:
                 rawSend((":" + ircNick + " " + "PRIVMSG" " Chanserv voice " + channel + " " + d + "\r\n"))
