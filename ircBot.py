@@ -32,7 +32,7 @@ ircNick = "<nick>"
 # What the bot uses as an attention character
 ircCKey = "!"
 #account password to use
-ircPassword ="<password>"
+ircPassword = "<password>"
 # List of channels to connect to
 channelList = ['<channels>'
               ]
