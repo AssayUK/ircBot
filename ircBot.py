@@ -129,7 +129,7 @@ while True:
 		if count == 5:
 			inChan = True
 		time.sleep(5)
-		rawSend((":"  +ircNick +  " PRIVMSG " + " nickserv :identify " + <password> + " \r\n"))	
+		rawSend((":"  +ircNick +  " PRIVMSG " + " nickserv :identify " + "<password>" + " \r\n"))	
 		for channel in channelList:
 		    rawSend("JOIN " + channel + "\r\n")
                 rawSend("MODE " + ircNick + " +B" + "\r\n")
