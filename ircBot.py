@@ -63,10 +63,6 @@ def ircRegister():
 def ircSendNick():
         rawSend("NICK " + ircNick + "\r\n")
 
-
-def ircPassword():
-        rawSend("PASS " + "password" + "\r\n")
-
 def Initialize():
         ircConnect()
         time.sleep(1)
@@ -86,9 +82,8 @@ def channelJoin(channel, data):
                 rawSend((":" + ircNick + " " + "PRIVMSG" " Chanserv voice " + channel + " " + d + "\r\n"))
         
 def channelRequests(channel, data):
-        '''Process all of the commands into the channel'''
 
-        # !ping to see if the bot is alive
+	# !ping to see if the bot is alive
         if ircCKey + "ping" in data:
                 ircMessage("pong", channel)
                 print("Pong Sent")
@@ -110,7 +105,8 @@ def channelRequests(channel, data):
         # Per RFC 1149.5
         if ircCKey + "random" in data:
                 ircMessage("4    ... https://xkcd.com/221/", channel)
-				
+
+	# because it amused me			
         if ircCKey + "hardrandom" in data:
                 ircMessage(("Hard random? Yeah, soon, untill then " + str(random.random())), channel)				
 
