@@ -25,9 +25,11 @@ threadlist = []
 
 # Edit these values the server
 ircServer = "<server>"
+#port to connect to
 ircSSLPort = <port>
+# nick that the bot should take
 ircNick = "<nick>"
-# What the bot uses as a response character
+# What the bot uses as an attention character
 ircCKey = "!"
 # List of channels to connect to
 channelList = ['<channels>'
@@ -74,8 +76,7 @@ def Initialize():
         time.sleep(1)
 		
 def channelJoin(channel, data):
-    print("Warning, Experimental Function")
-    for line in data.split('\n'):
+     for line in data.split('\n'):
         if "JOIN" in line:
             print(line)
             foo = line.split(":")
